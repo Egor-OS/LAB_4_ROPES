@@ -4,16 +4,29 @@ public class Arr {
         Array = new int[size];
     }
     int [] Array;
+<<<<<<< HEAD
     int counter=0;
 
     public void General_arr (int size){
+=======
+
+    public void General_arr (int size){
+
+
+        int counter=0;
+
+>>>>>>> master
         for (int i = 0; i<size;i++){
             add_item(i); }
         //show(Array,Array.length);
 
         while (check_child(0)!=0){
         restore(0);
+<<<<<<< HEAD
         }
+=======
+        counter+=Array[0];}
+>>>>>>> master
         System.out.println("COUNT ==>> " + counter);
 
     }
@@ -28,7 +41,11 @@ public class Arr {
     public int min_child(int index){
         if (check_child(index) == 1) return  (index*2)+1;
         else if (check_child(index)==2) return (index*2)+2;
+<<<<<<< HEAD
             else if (Array[ind_c(index,1)] > Array[ind_c(index,2)]) { return ind_c(index,2);}
+=======
+            else if (Array[ind_c(index,1)] >= Array[ind_c(index,2)]) { return ind_c(index,2);}
+>>>>>>> master
                 else return  ind_c(index,1);
     }
 
@@ -36,6 +53,7 @@ public class Arr {
         while (check_child(index)!=0) {
             if (index!=0) {
             Array[index]= Array[min_child(index)];
+<<<<<<< HEAD
             } else {Array[index]+=Array[min_child(index)]; counter+=Array[0];}
             index= min_child(index);
 
@@ -57,6 +75,15 @@ public class Arr {
     }
 
 
+=======
+            } else {Array[index]+=Array[min_child(index)]; }
+            index= min_child(index);
+        }
+        Array[index]=0;
+        //System.out.println();
+    }
+
+>>>>>>> master
     public int ind_c(int index, int S){
         if (S==1) { return (index*2)+1;}
         else { return (index*2)+2;}

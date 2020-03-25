@@ -10,6 +10,10 @@ public class MAIN {
         //ob.size=size;
         ob.General_arr(size);
         long time = start - System.currentTimeMillis();
+<<<<<<< HEAD
         System.out.println("TIME: "+(-time));
+=======
+        System.out.println(time);
+>>>>>>> master
     }
 }
